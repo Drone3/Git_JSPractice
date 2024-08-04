@@ -15,6 +15,43 @@
     return choices[RPC]
    }
    console.log(getComputerChoice())
+  // get human choice, use a prompt to pick from an array
+  function getHumanChoice(){
+    
+   let answer = prompt ("whats your awnser?");
+
+  choices = ["rock","paper","scissors"];
+
+  if(
+    answer === "rock") {
+      return"rock";}
+    
+   else if( answer === "scissors") {
+     return "scissors";}
+    
+
+   else if( answer === "paper"){ 
+      return"paper";}  
+  
+  }
+console.log(getHumanChoice());
+
+
+  /* if (choices.includes("rock"));
+   
+   console.log("rock")
+
+  elif(choices.includes("paper")
+  );
+    console.log("paper");
+
+   
+    elif(choices.includes("scissors")
+    ); console.log ("scissors");
+  }
+   console.log(getHumanChoice())
+*/
+ 
 
 
   </script>
