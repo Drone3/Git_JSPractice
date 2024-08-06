@@ -1,2 +1,2 @@
 # Git_JSPractice
-"Just practiceing some JAVAscript fundamentals with ODIN" 
+"Just practicing some JAVAscript fundamentals with ODIN" 
