@@ -10,6 +10,7 @@
 const choices = ["rock","paper","scissors"];
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
+
     
     // make computer have choices of rock,paper, scissors,
    function getComputerChoice (){
@@ -24,69 +25,50 @@ const computerSelection = getComputerChoice();
   function getHumanChoice(){
     
    let answer = prompt ("whats your awnser?");
-       answer = answer.toLowerCase;
+       answer = answer.toLowerCase();
 
   if(
     answer === "rock") {
       return choices[0];}
     
-   else if( answer === "scissors") {
+   else if( answer === "paper") {
      return choices[1];}
     
 
-   else if( answer === "paper"){ 
+   else if( answer === "scissors"){ 
       return choices[2];}  
   
+    else (
+      alert ("please try again")
+    )
+    return getHumanChoice();
   }
 
-  let humanScore = 0
-  let computerScore= 0
+ 
  // create a functoin to playRound for human choice and computer choice
 
 function playRound(humanChoice, computerChoice) { 
+  let humanScore = 0
+  let computerScore= 0
   
 if(
   humanChoice === computerChoice){
-  return 'tie'}
-if( humanChoice === "rock" && computerChoice === "scissors"){
-  return 'Player Wins'
-}
+  return "tie";
 
-else if( humanChoice === "scissors" && computerChoice === "paper"){
-  return 'Player Wins'
-}
-else if( humanChoice === "paper" && computerChoice === "rock"){
-  return 'Player Wins'
+  } else if(( humanChoice === choices[0] && computerChoice === choices[1]) 
+  || (humanChoice === choices[1] && computerChoice === choices[2])
+  || (humanChoice === choices[2] && computerChoice === choices[0]))
+  {
+    humanScore++;
+   return "Player Wins!";
+  } else {
+   computerScore++;
+   return "Computer Wins!";
+      }
 
-}
-else return "computer wins"
-
-}
-
+    }
+  
 console.log(playRound())
-
-
-
-
-
-
-
-
-  /* if (choices.includes("rock"));
-   
-   console.log("rock")
-
-  elif(choices.includes("paper")
-  );
-    console.log("paper");
-
-   
-    elif(choices.includes("scissors")
-    ); console.log ("scissors");
-  }
-   console.log(getHumanChoice())
-*/
- 
 
 
   </script>
