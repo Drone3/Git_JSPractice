@@ -7,11 +7,49 @@
 <body>
   <script>
 
+      
 const choices = ["rock","paper","scissors"];
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
 
-    
+function playGame(){
+ 
+  let humanScore = 0;
+  let computerScore= 0;
+
+
+
+for (
+  let i= 0; i < 5; i++){
+  
+
+  const humanSelection = getHumanChoice();
+  const computerSelection = getComputerChoice();
+  const Winner = playRound(humanSelection,computerSelection);
+if( 
+  Winner === "Computer Wins!") {
+    computerScore ++;
+    console.log( "one round for Computer")
+  }
+  else if( 
+  Winner === "Player Wins!") {
+    humanScore ++;
+    console.log( "one round for Player")
+  }
+  else if( 
+  Winner === "Tie") {
+  
+    console.log( "Draw");
+  }
+ 
+  }
+  
+  if(humanScore < computerScore) {console.log("You Lose The Game!")}
+  else if ( humanScore > computerScore) {console.log ("You Win The Game!")}
+  else{ console.log ("Tie")}
+  
+  
+//play 5 rounds command//
+
+
     // make computer have choices of rock,paper, scissors,
    function getComputerChoice (){
     
@@ -20,7 +58,7 @@ const computerSelection = getComputerChoice();
     // state the value
     return choices[RPC]
    }
-  
+   
   // get human choice, use a prompt to pick from an array
   function getHumanChoice(){
     
@@ -47,9 +85,8 @@ const computerSelection = getComputerChoice();
  
  // create a functoin to playRound for human choice and computer choice
 
-function playRound(humanChoice, computerChoice) { 
-  let humanScore = 0
-  let computerScore= 0
+
+function playRound(humanChoice, computerChoice)  { 
   
 if(
   humanChoice === computerChoice){
@@ -65,10 +102,13 @@ if(
    computerScore++;
    return "Computer Wins!";
       }
-
-    }
+     
+}
   
-console.log(playRound())
+}
+
+   playGame();
+   
 
 
   </script>
